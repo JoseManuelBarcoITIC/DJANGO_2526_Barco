@@ -33,7 +33,6 @@ def students(request):
     }
     info = {'msg':students_list}
     return render(request,'main_page.html',info)
-from django.shortcuts import render
 
 def teachers(request):
     teacher_list = {

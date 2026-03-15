@@ -1,13 +1,11 @@
 {% extends 'main.html' %}
 
 {% block content %}
-    <h1>Es mostra llistat d'usuaris des de main_page</h1>
+    <h1>Llista d'usuaris</h1>
         <ul>
-            {% for k,v in msg.items %}
-            <h3>{{ k }} </h3>
-            <li>id: {{ v.id }}</li>
-            <li>name {{ v.name }}</li>
-            <li>email {{ v.email }}</li>
+            {% for person in persons %}
+            <li>Name: {{ person.f_name }}</li>
+            <li>Age: {{ person.age }}</li>
             </br>
             {% endfor %}
         </ul>

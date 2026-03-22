@@ -6,7 +6,6 @@
             {% csrf_token %}
             <p>Are you sure you want to eliminate {{user.f_name }} ? </p>
             <button><a href="{% url 'select_students' %}">RETURN</a></button>
-            <input tye="submit" value="CONFIRM">
-            <input type="submit">
+            <button tye="submit" value="CONFIRM">CONFIRM</button>
         </form>
 {% endblock %}

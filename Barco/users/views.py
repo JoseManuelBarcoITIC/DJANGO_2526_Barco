@@ -30,6 +30,7 @@ def update_user (request,pk):
     form = UserForm(instance=user_id)
 
     if request.method == "POST":
+        form = UserForm(request.POST,instance=user_id)
         if form.is_valid():
             form.save()
             return redirect ('select_students')
